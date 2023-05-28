@@ -1,0 +1,136 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+#root {
+  height: 100%;
+}
+
+html,
+body {
+  min-height: 100vh;
+  height: 100%;
+}
+
+span {
+  font-size: 40px;
+}
+
+.dark-mode {
+  background-color: darkgray;
+  color: white;
+  height: 100%;
+  transition: background-color 0.25 ease-in-out;
+}
+
+.light-mode {
+  background-color: darkgrey;
+  color: black;
+  height: 100%;
+  transition: background-color 0.25 ease-in-out;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch {
+  position: abosult;
+  display: inline-block;
+  /*top: 40px; */
+left: 650px;
+width: 60px;
+height: 14px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: darkgrey;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: darkgrey;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: darkgrey;
+}
+
+input:focus + .slider {
+  box-shadow: black;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translate(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded slider */
+.slider.round{
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch-checkbox {
+  padding: 10px;
+}  
+
+@media only screen and (max-width: 992px) {
+  .switch {
+    position: relative;
+    left: 300px;
+  }
+}
+@media only screen and (max-width 768px){
+  .switch {
+    position: relative;
+    left: 250px;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .switch {
+    position: relative;
+    left: 100px;
+  }
+  
+}
